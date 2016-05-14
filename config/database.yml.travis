@@ -2,7 +2,6 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host: localhost
 
 development:
   <<: *default
@@ -10,7 +9,8 @@ development:
 
 test:
   <<: *default
-  database: myapp_test
+  database: travis_ci_test
+  username: postgres
 
 production:
   <<: *default
