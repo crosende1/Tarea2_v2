@@ -6,6 +6,12 @@ class ApplicationController < ActionController::Base
 
 def httppartymetodo 
 
+
+if ((params['tag']).nil? || (params['access_token']).nil?) 
+	render json: " ", :status => 400
+
+
+else
 tag_stats = HTTParty.get('https://api.instagram.com/v1/tags/'+params['tag']+'/media/recent?access_token='+params['access_token']+'&count=20')
 
 media_count = HTTParty.get('https://api.instagram.com/v1/tags/'+params['tag']+'?access_token='+params['access_token'])
@@ -31,20 +37,15 @@ end
 end
 
 
-render json: {metadata: {total: media_count["data"]["media_count"]}, posts: @tagsArreglo, version: '1.0.0'}
+render json: {metadata: {total: media_count["data"]["media_count"]}, posts: @tagsArreglo, version: '1.1.0'}
 
 
 end
 ## end de partymetodo
 
 
-#before_filter :render_unavailable
 
-#def render_unavailable
- # render :nothing => true, :status => 400
-#end
-
-
+end
 
 
 end
