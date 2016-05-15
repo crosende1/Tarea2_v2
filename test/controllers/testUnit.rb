@@ -19,6 +19,11 @@ test "error400" do
   
 end
 
+test "cuentaFotos" do
+
+end
+
+
 #borrar
 test "suma" do
     assert_equal 4, Mates.run("2+2")
