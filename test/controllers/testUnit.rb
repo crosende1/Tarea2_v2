@@ -10,14 +10,23 @@ test "validar_usuario" do
     assert_equal(username, 'Ricardo')
 end
 
-test "error400" do
-    get :httppartymetodo, access_token: "cata" 
-    assert true
 
+test "should get index" do
+   
+    get :index
+    assert_response :success
 end
+
 
 test "prueba_fallida" do
     assert false
+end
+
+
+test "error400" do
+    post :tags #sin params
+    assert_response 400
+  
 end
 
 test "suma" do
