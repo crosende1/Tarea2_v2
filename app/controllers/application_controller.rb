@@ -26,12 +26,12 @@ else
 	imagesArreglo=contador["images"]["thumbnail"]
 end
 
-@tagsArreglo << [tags: contador["tags"], username: contador["user"]["username"], likes: contador["likes"]["count"], url: imagesArreglo["url"], caption: contador["caption"]["text"], version: '1.0.0']
+@tagsArreglo << {tags: contador["tags"], username: contador["user"]["username"], likes: contador["likes"]["count"], url: imagesArreglo["url"], caption: contador["caption"]["text"]}
 
 end
 
 
-render json: {metadata: {total: media_count["data"]["media_count"]}, posts: @tagsArreglo}
+render json: {metadata: {total: media_count["data"]["media_count"]}, posts: @tagsArreglo, version: '1.0.0'}
 
 
 end
