@@ -1,3 +1,5 @@
+require 'coveralls'
+
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -37,7 +39,7 @@ end
 end
 
 
-render json: {metadata: {total: media_count["data"]["media_count"]}, posts: @tagsArreglo, version: '1.1.1'}
+render json: {metadata: {total: media_count["data"]["media_count"]}, posts: @tagsArreglo, version: '1.1.2'}
 
 
 end
