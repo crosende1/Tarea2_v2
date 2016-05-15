@@ -2,5 +2,14 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
+require 'rake/testtask'
 
 Rails.application.load_tasks
+
+Rake::TestTask.new(:test) do |test|
+  test.libs << 'test'
+  test.test_files = FileList['tests/test_*.rb']
+end
+
+desc "Run Tests"
+task :default => :test
