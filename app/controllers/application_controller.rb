@@ -37,7 +37,7 @@ end
 end
 
 
-render json: {metadata: {total: media_count["data"]["media_count"]}, posts: @tagsArreglo, version: '1.1.0'}
+render json: {metadata: {total: media_count["data"]["media_count"]}, posts: @tagsArreglo, version: '1.1.1'}
 
 
 end
