@@ -22,7 +22,6 @@ imagesArreglo=Array.new
 
 
 
-
 tag_stats["data"].each do |contador| 
 
 if (contador["images"]["standard_resolution"]!= nil)
