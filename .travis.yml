@@ -14,9 +14,8 @@ deploy:
   api_key:
     secure: Lh5+QeEty6wLIp/10UQgmRNAhjuej2bulbtYuMw00/GMVEBWmaclXfqJ9DF+MTisZeaWP6S1NYmH6HAiFPAXBsbzUrW/H3v0Hvj28YC2Ubh2mBoUwzbeNfnoqa28fGgOCbUswgPEfjAR7wHS0P7tCX60X6OAy/AX/Ktr4D50XTWwG03Acp7ibXG4jx9iyBub8QsorPnPK9wvw1Qn9ynuxZ//mh/HwawN5whmI5WjeAvVG0nwZ7tBqId4zONrNamMcm7qkHV8ncaw5aLS5JCUSbHlrVpK9Ui9VwrVq6ZE7LxxGlAYxYyqN5M7Z6oSHuMXOMw6nH4lWGTlLvaQnx74hoUdHMTN9+sOXdebSLDNYR24qWQD8KmQU4p9H83Wzy3OMqIo5e/WnXcmLZCGE3ixVwlz8Ximsj5iFMLUnxxyTtX3/d0Ot5O9LPnErf+WhC5UxprPFmNUMzsDI9ECw+d6US7MsykyX2TO+Ex4cKEWESEpPVVm6s+qhJbs6m4Dw3l4YyWm9fwhbMrfGBA9ii327A38d0cu69eCni/XvGO8t/qwAAAGWPdVMnuEphKDqAC/X3at2nbCmsnsnymHPoulD9I3UEn80yow+l9Fq2QN19mDPuptwMIx3BkxZy2EBHkbZfYaznUGntm+Kn/pOGACOg9mrXEtFECsIEBh4h2wN5E=
 
-  after_success:
-  - coveralls
+after_success:
+- coveralls
 
-notifications:
-  webhooks: https://coveralls.io/webhook?repo_token=REPO_TOKEN_FROM_COVERALLS
+
 
