@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
     post '/' => 'application#httppartymetodo'
 
-
+    #get 'instagram/:tag/buscar' => 'application#httppartymetodo'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
